@@ -9,7 +9,6 @@ router.get("/", async (req, res) => {
     res.json(err);
   });
   const posts = postData.map((post) => post.get({ plain: true }));
-  console.log(posts);
   res.render("all", { posts, loggedIn: req.session.loggedIn });
 });
 
@@ -21,6 +20,15 @@ router.get("/login", (req, res) => {
   }
 
   res.render("login");
+});
+
+router.get("/dashboard", (req, res) => {
+  if (req.session.loggedIn) {
+    res.render("dashboard");
+    return;
+  }
+
+  res.redirect("/");
 });
 
 module.exports = router;
