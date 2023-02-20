@@ -5,7 +5,7 @@ const newPostHandler = async (event) => {
   const body = document.querySelector("#post-body").value.trim();
 
   if (title && body) {
-    const response = await fetch("/api/projects", {
+    const response = await fetch("/api/post", {
       method: "POST",
       body: JSON.stringify({ title, body }),
       headers: { "Content-Type": "application/json" },
@@ -17,4 +17,3 @@ const newPostHandler = async (event) => {
 };
 
 document.querySelector(".form").addEventListener("submit", newPostHandler);
-document.querySelector(".project-list").addEventListener("click", deleteHandler);
