@@ -428,6 +428,33 @@
     color: #065b83;
     text-decoration: underline;
   }
+
+  .each-post {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    border: #000000;
+    border-width: 4px;
+    margin: .5rem;
+    width: 100%;
+    padding: 1rem;
+min-width: 500px;
+  }
+
+  .single-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 8px;
+    margin-top: 4px;
+    width: 100%;
+    border: solid;
+  }
+
+  .border-bottom {
+    border-bottom: solid;
+  }
   
   /* HEIGHT / WIDTH UTILS */
   .w-100 {
